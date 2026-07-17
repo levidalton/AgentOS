@@ -1,0 +1,28 @@
+{
+  "package": "agent-os",
+  "schema": 1,
+  "managed": [
+    "agent-os/PROTOCOL.md",
+    "agent-os/MANIFEST.json",
+    "agent-os/VERSION",
+    "agent-logs/README.md",
+    ".claude/hooks/journal.mjs"
+  ],
+  "adapters": [
+    "CLAUDE.md",
+    "GROK.md"
+  ],
+  "projectOwned": [
+    "AGENTS.md",
+    "STATUS.md",
+    "docs/DECISIONS.md",
+    "docs/CHANGELOG.md",
+    "docs/LEARNINGS.md",
+    "agent-logs/YYYY-MM-DD-*.md"
+  ],
+  "notes": {
+    "managed": "Always refreshed by `agent-os install` and `agent-os update` (includes agent-logs/README.md — do not hand-edit it in a project).",
+    "adapters": "Overwritten on update only with --force-adapters (preserves thin-pointer pattern).",
+    "projectOwned": "Never overwritten by update unless --force. STATUS.md is never overwritten, even with --force. Sealed logs are never touched."
+  }
+}

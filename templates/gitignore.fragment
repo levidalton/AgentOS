@@ -1,0 +1,7 @@
+# Agent OS — live session journals (sealed agent-logs/*.md ARE committed)
+agent-logs/_active/*
+!agent-logs/_active/.gitkeep
+
+# Common junk (safe defaults for consumer projects)
+.DS_Store
+node_modules/

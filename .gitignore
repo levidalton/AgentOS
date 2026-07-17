@@ -1,0 +1,13 @@
+# --- Agent OS ---
+# Live session journals (sealed agent-logs/*.md ARE committed)
+agent-logs/_active/*
+!agent-logs/_active/.gitkeep
+
+.DS_Store
+**/.DS_Store
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*

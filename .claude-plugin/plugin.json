@@ -1,0 +1,7 @@
+{
+  "name": "agent-os",
+  "version": "0.4.1",
+  "description": "Portable continuity for coding agents — STATUS.md source of truth, AGENTS.md spine, session protocol, sealed agent logs. Agent-agnostic (Codex, Claude, Grok, Gemini, Kimi, Cursor, Copilot, …) via the AGENTS.md standard; this plugin adds the Claude Code convenience layer. CLI at ${CLAUDE_PLUGIN_ROOT}/bin/agent-os.mjs.",
+  "license": "MIT",
+  "keywords": ["continuity", "memory", "agents", "status", "protocol"]
+}

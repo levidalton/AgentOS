@@ -1,0 +1,13 @@
+{
+  "name": "agent-os",
+  "owner": {
+    "name": "Agent OS"
+  },
+  "plugins": [
+    {
+      "name": "agent-os",
+      "source": "./",
+      "description": "Portable continuity for coding agents — STATUS.md source of truth, AGENTS.md spine, session protocol, sealed agent logs, install/adopt/check CLI."
+    }
+  ]
+}
