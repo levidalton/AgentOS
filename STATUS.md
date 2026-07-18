@@ -8,13 +8,16 @@ Update at the end of every meaningful session (see `agent-os/PROTOCOL.md`).
 Updated: 2026-07-17 by claude-code
 
 ## In progress
-- _Nothing — 0.4.1 published; next milestone is origin-project migration._
+- Origin-project migration: the origin project now consumes this package via `adopt`
+  (managed protocol + hook, generic STATUS headers, CI runs `agent-os check` from a
+  shallow clone of the public repo) — PR awaiting human merge (2026-07-17). Two hook
+  behavior deltas surfaced and were adopted consumer-side: prompt redaction and
+  orphan journals for session-less Stop events.
 
 ## Blocked / needs human
 - _None._
 
 ## Next up
-- Migrate the origin project to consume this package (thin AGENTS, managed PROTOCOL) without losing STATUS/logs
 - Optional `agent-os seal` helper that prompts for sealed-log fields from `_active/`
 - Optional CI snippet template for consumer repos (`node …/agent-os.mjs check .`)
 - Consider `docs/plans/` convention for large multi-session plans (STATUS still owns “where we are”)
@@ -22,7 +25,6 @@ Updated: 2026-07-17 by claude-code
 ## Known issues
 - id: no-npm-publish — package is private; invoke by path only (public `agent-os` on npm is a different product) — severity: info
 - id: adapter-merge — existing `.claude/settings.json` is not auto-merged on install (fragment written alongside) — severity: low
-- id: origin-not-migrated — the origin project still has its own forked Agent OS files; dual maintenance until install/update — severity: med
 - id: status-concurrency — two agents ending simultaneously last-write-wins; Protocol says re-read STATUS before write — severity: low
 
 ## Open questions
